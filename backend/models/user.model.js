@@ -22,7 +22,7 @@ const userSchema=new mongoose.Schema({
         type:String,
         default:""
     }
-},{timestamps:true})
+},{timestamps:true}) // timestamp true hmein bta raha ke user kab create hua
 
 const User=mongoose.model("User",userSchema)
 
