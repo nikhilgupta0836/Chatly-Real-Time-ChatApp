@@ -1,4 +1,4 @@
-import genToken from "../config/token.js"
+import genToken from "../config/token.js"// importing it 
 import User from "../models/user.model.js"
 import bcrypt from "bcryptjs"
 export const signUp=async (req,res)=>{
@@ -29,7 +29,8 @@ res.cookie("token",token,{
     maxAge:7*24*60*60*1000,
     sameSite:"Strict",
     secure:false
-   })
+   
+})
 
    return res.status(201).json(user)
 
@@ -51,13 +52,14 @@ export const login=async (req,res)=>{
     return res.status(400).json({message:"incorrect password"})
  }
  
- const token=await genToken(user._id)
+ const token=await genToken(user._id) // mongodb .-id main store karta hai har document ka unique id
  
  res.cookie("token",token,{
      httpOnly:true,
      maxAge:7*24*60*60*1000,
      sameSite:"Strict",
-     secure:false
+     secure:false // in production true kar dena jab delpoy kar diya abi yahan pe http 
+     // localhost use ho raha we will make secure true when using https
     })
  
     return res.status(200).json(user)
