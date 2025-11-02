@@ -4,7 +4,7 @@ dotenv.config()
 const port=process.env.PORT || 5000
 
 
-// import connectDb from "./config/db.js"
+import connectDb from "./config/db.js"
 import authRouter from "./routes/auth.routes.js"
 import cookieParser from "cookie-parser"
 import cors from "cors"
