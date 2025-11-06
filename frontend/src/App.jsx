@@ -38,13 +38,14 @@ function App() {
         dispatch(setSocket(null))
       }
     }
-
+ 
+    
 
   },[userData])
 
   return (
     <Routes>
-      <Route path='/login' element={!userData?<Login/>:<Navigate to="/"/>}/>
+      <Route path='/login ' element={!userData?<Login/>:<Navigate to="/"/>}/>
       <Route path='/signup' element={!userData?<SignUp/>:<Navigate to="/profile"/>}/>
       <Route path='/' element={userData?<Home/>:<Navigate to="/login"/>}/>
       <Route path='/profile' element={userData?<Profile/>:<Navigate to="/signup"/>}/>

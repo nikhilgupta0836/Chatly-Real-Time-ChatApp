@@ -7,7 +7,7 @@ const isAuth=async (req,res,next)=>{
         }
 
         let verifyToken=  jwt.verify(token,process.env.JWT_SECRET)
-        req.userId=verifyToken.userId
+        req.userId=verifyToken.userId // yahan pe hm id store kara rahe ye bohot kaam ayegi age 
         next()
 
 
