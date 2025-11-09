@@ -37,7 +37,7 @@ userName,email,password
 
   return (
     <div className='w-full h-[100vh] bg-slate-200 flex items-center justify-center'>
-     <div className='w-full max-w-[500px] h-[600px] bg-white rounded-lg shadow-gray-400 shadow-lg flex flex-col gap-[30px]'>
+        <div className='w-full max-w-[500px] h-[600px] bg-white rounded-lg shadow-gray-400 shadow-lg flex flex-col gap-[30px]'>
         <div className='w-full h-[200px] bg-[#20c7ff] rounded-b-[30%] shadow-gray-400 shadow-lg flex items-center justify-center'>
            <h1 className='text-gray-600 font-bold text-[30px]'>welcome to <span  className='text-white'>chatly</span></h1>
         </div>
