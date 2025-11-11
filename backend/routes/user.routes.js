@@ -7,6 +7,6 @@ const userRouter=express.Router()
 
 userRouter.get("/current",isAuth, getCurrentUser)
 userRouter.get("/others",isAuth, getOtherUsers)
-userRouter.put("/profile",isAuth,upload.single("image"),editProfile)
+userRouter.put("/profile",isAuth,upload.single("image"),editProfile)  // multer middelware bhi upload kar rahe here that is upload
 userRouter.get("/search",isAuth, search)
 export default userRouter
